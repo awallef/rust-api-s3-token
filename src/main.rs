@@ -12,9 +12,9 @@ fn main() {
     let connection = establish_connection();
     let results = accounts::all(&connection);
     match results {
-        Ok(accountsVector) => {
-            println!("Displaying {} accounts", accountsVector.len());
-            for account in accountsVector {
+        Ok(accounts_vector) => {
+            println!("Displaying {} accounts", accounts_vector.len());
+            for account in accounts_vector {
                 println!("{}", account.id);
                 println!("-----------\n");
                 println!("{}", account.name);
